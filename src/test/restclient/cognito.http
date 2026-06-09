@@ -1,0 +1,68 @@
+### Login
+POST https://cognito-idp.sa-east-1.amazonaws.com/
+X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+Content-Type: application/x-amz-json-1.1
+
+{
+  "AuthFlow": "USER_PASSWORD_AUTH",
+  "ClientId": "5db37c5h4nodirstdntpqk5lmm",
+  "AuthParameters": {
+    "USERNAME": "luiz@email.com",
+    "PASSWORD": "Password1!"
+  }
+}
+
+#user@email.com
+#UserPass1!
+
+@baseUrl = http://localhost:8080
+@token = eyJraWQiOiIyRThZbnJMc2NFeVhGVG1EYWJzbnpXcEU4Mm1paU9tUGhJVDRsYm1YdWw4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI5M2NjYWE3YS0yMGQxLTcwNTQtZjc1ZS0xOGVkZjM3YzkzYWYiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuc2EtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3NhLWVhc3QtMV9YU3RmQ3J1RVIiLCJjbGllbnRfaWQiOiI1ZGIzN2M1aDRub2RpcnN0ZG50cHFrNWxtbSIsIm9yaWdpbl9qdGkiOiJiZTgzM2UxZi1mYmIxLTRiZTgtODhkNS1lYWFiNzZkOGEyYWQiLCJldmVudF9pZCI6IjFjZTRkNDIxLTMwMjAtNDgxYy04ODZkLTE5MGM2MThhYjQxMSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3Nzk4NDAwNjQsImV4cCI6MTc3OTg0MzY2NCwiaWF0IjoxNzc5ODQwMDY1LCJqdGkiOiIwNDAxY2IwMS0zYWRjLTQzZmMtOGY0OC05NzY3ZGY5YzYyOGQiLCJ1c2VybmFtZSI6IjkzY2NhYTdhLTIwZDEtNzA1NC1mNzVlLTE4ZWRmMzdjOTNhZiJ9.sKq_U-5BVPHoHQccYO6vqRVzZCEmYw6qp73bancIYJeCf3k9AFraf8XBWysk6eTqAu6H98cmFay6Xq52uUTThn4JMzAPI-CZqSo6byreF_eZOTF5PVqJ8GVhh9zkM8DjcD0iBQvv142RCnbQJYg4B0qpRpCza2SUyxr8vrUGL-UFQu3Ksqm4w4WiK7m6sxaN3AjU5A_QIGVhuG2EnvwKpHlugAttNMyBe8fTiRmzIG8tUw6XkequpgqHzIkcqk0MYnD6C3QPV2JdpLEV7FGy6ETgAe53z7aTqENxhEaP_c6iAqtCofLTGm9f9HkuxyW36Ii8FzIbSK4kZGu9D2W07Q.eyJzdWIiOiIxMzNjZWExYS1lMDExLTcwNDYtNjNkMy0wYzVmNzBkYmMwMGYiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuc2EtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3NhLWVhc3QtMV9YU3RmQ3J1RVIiLCJjbGllbnRfaWQiOiI1ZGIzN2M1aDRub2RpcnN0ZG50cHFrNWxtbSIsIm9yaWdpbl9qdGkiOiJjYmFhYzFmZi01NDY5LTRlMzYtODZiZi05MWMyNWNmODk4MjQiLCJldmVudF9pZCI6IjUxMmVkZTI0LTQ0MmQtNDFjYi05MTNjLTY3NWQxOTJhNDE1MiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3Nzk4MjY4NDgsImV4cCI6MTc3OTgzMDQ0OCwiaWF0IjoxNzc5ODI2ODQ4LCJqdGkiOiI3NTFjOTAyMS1lMDc5LTQzYWYtYjJhZi03M2JmZTgzYmM0MjQiLCJ1c2VybmFtZSI6IjEzM2NlYTFhLWUwMTEtNzA0Ni02M2QzLTBjNWY3MGRiYzAwZiJ9.HkHgYfjZ9rBfS_Pl7y_o5qaPAnLi_CEdJbq3vA5Dy0zVbRdT6r5eBwJ3DyiN8145TB3dtj3TUBfa8kCocCxW4qePP5SwaP2s9oq2WNg-MMRbQb7j317ngIYjjFGCZnMj2W4ZZ6B7Ufvif_LTrMyyOjpRu5JvkwKtB5JehJ-Q4ty6E-kxgV5HEDSPQbYpKhgC20-RLpe5GrLL9HlVEqlQtkZYfFs4Lg4asW7FWndUxn1tyWPknqXKs_TLvOQ6dy6osv30yHtBSYMd0XN1y9yWbJ9KurOC46-M3m7zvOfC4R-Wa-EglMnw4Alyibwy-Zqh7YpDQAIe8s5U_PTNHsag8A 
+
+### Listar Lotes
+GET {{baseUrl}}/lotes
+Authorization: Bearer {{token}}
+
+### Cadastrar Lote
+POST {{baseUrl}}/lotes
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "descricao": "Lote Engorda 02 - Angus"
+}
+
+
+### =========================================
+### 1. USUÁRIO (Perfil Local)
+### =========================================
+
+### Criar ou Atualizar Meu Perfil
+POST {{baseUrl}}/usuarios
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nomeFazenda": "Fazenda Boa Vista"
+}
+
+### Obter Meu Perfil (usando o /me)
+GET {{baseUrl}}/usuarios/me
+Authorization: Bearer {{token}}
+
+### =========================================
+### 2. ANIMAL (Testando Ownership)
+### =========================================
+
+### Cadastrar Animal (O donoId será setado pelo token)
+POST {{baseUrl}}/animais
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "brinco": "1234",
+  "raca": "Nelore"
+}
+
+### Listar Animais (Vai trazer apenas os seus)
+GET {{baseUrl}}/animais
+Authorization: Bearer {{token}}

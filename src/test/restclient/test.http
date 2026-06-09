@@ -1,0 +1,125 @@
+### Variável com a URL base da sua API
+@baseUrl = http://localhost:8080
+
+
+### 1. LOTE
+
+### Cadastrar Lote
+POST {{baseUrl}}/lotes
+Content-Type: application/json
+
+{
+  "descricao": "Lote Engorda 01 - Novilhos Nelore"
+}
+
+### Listar Lotes
+GET {{baseUrl}}/lotes
+
+
+### 2. PIQUETE
+
+### Cadastrar Piquete
+POST {{baseUrl}}/piquetes
+Content-Type: application/json
+
+{
+  "nome": "Pasto Fundo - Braquiária",
+  "areaHectares": 15.5,
+  "capacidadeCabecas": 40
+}
+
+### Listar Piquetes
+GET {{baseUrl}}/piquetes
+
+
+### 3. ANIMAL
+
+### Cadastrar Animal
+POST {{baseUrl}}/animais
+Content-Type: application/json
+
+{
+  "identificacao": "BR-9901",
+  "raca": "Nelore",
+  "lote": {
+    "id": 1
+  }
+}
+
+### Listar Animais
+GET {{baseUrl}}/animais
+
+
+### 4. PESAGEM
+
+### Registrar Pesagem
+POST {{baseUrl}}/pesagens
+Content-Type: application/json
+
+{
+  "pesoKg": 215.5,
+  "dataPesagem": "2026-05-04",
+  "animal": {
+    "id": 1
+  }
+}
+
+### Listar Pesagens
+GET {{baseUrl}}/pesagens
+
+
+### 5. TRATAMENTO VETERINÁRIO
+
+### Registrar Tratamento
+POST {{baseUrl}}/tratamentos
+Content-Type: application/json
+
+{
+  "diagnostico": "Carrapato",
+  "medicamento": "Ivermectina 1%",
+  "dosagem": "10ml",
+  "dataTratamento": "2026-05-04",
+  "animal": {
+    "id": 1
+  }
+}
+
+### Listar Tratamentos
+GET {{baseUrl}}/tratamentos
+
+
+### 6. VACINAÇÃO
+
+### Registrar Vacinação
+POST {{baseUrl}}/vacinacoes
+Content-Type: application/json
+
+{
+  "nomeVacina": "Febre Aftosa",
+  "dataAplicacao": "2026-05-04",
+  "animal": {
+    "id": 1
+  }
+}
+
+### Listar Vacinações
+GET {{baseUrl}}/vacinacoes
+
+
+### 7. ALIMENTAÇÃO
+
+### Registrar Alimentação do Lote
+POST {{baseUrl}}/alimentacoes
+Content-Type: application/json
+
+{
+  "tipoRacao": "Ração de Engorda 18% Proteína",
+  "quantidadeKg": 150.0,
+  "dataHoraAplicacao": "2026-05-04T07:30:00",
+  "lote": {
+    "id": 1
+  }
+}
+
+### Listar Alimentações
+GET {{baseUrl}}/alimentacoes
