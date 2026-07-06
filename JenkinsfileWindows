@@ -16,7 +16,7 @@ pipeline {
         stage('Preparar Secrets') {
             steps {
                 withCredentials([file(credentialsId: 'api_env_file', variable: 'SECRET_ENV')]) {
-                    bat 'copy "%SECRET_ENV%" iot.env'
+                    bat 'copy "%SECRET_ENV%" api.env'
                 }
             }
         }
