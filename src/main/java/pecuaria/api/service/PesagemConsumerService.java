@@ -32,7 +32,7 @@ public class PesagemConsumerService {
 
             PesagemIoTDto dados = objectMapper.readValue(mensagemJson, PesagemIoTDto.class);
 
-            Optional<Animal> animalOpt = animalRepository.findByIdentificacaoAndDonoId(dados.rfidAnimal(), dados.donoId());
+            Optional<Animal> animalOpt = animalRepository.findByIdentificacaoAndDonoCognitoSubId(dados.rfidAnimal(), dados.donoId());
 
             if (animalOpt.isPresent()) {
                 Animal animal = animalOpt.get();
