@@ -18,9 +18,10 @@ import pecuaria.api.repository.PesagemRepository;
 @RequiredArgsConstructor
 public class PesagemConsumerService {
 
-    private final ObjectMapper objectMapper;
     private final PesagemRepository pesagemRepository;
     private final AnimalRepository animalRepository;
+
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     public record PesagemIoTDto(String rfidAnimal, Double pesoKg, String donoId, String dataHoraLeitura) {}
 
