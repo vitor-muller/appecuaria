@@ -11,5 +11,5 @@ import pecuaria.api.model.Animal;
 public interface AnimalRepository extends JpaRepository<Animal, Long> {
     List<Animal> findByDonoCognitoSubId(String cognitoSubId);
     Optional<Animal> findByIdAndDonoCognitoSubId(Long id, String cognitoSubId);
-    Optional<Animal> findByRfidAndDonoId(String rfid, String donoId);
+    Optional<Animal> findByIdentificacaoAndDonoId(String identificacao, String donoId);
 }
